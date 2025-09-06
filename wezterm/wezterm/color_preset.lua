@@ -1,0 +1,28 @@
+return {
+  ansi = {
+    '#303030',
+    '#ea3323',
+    '#7aae3a',
+    '#f5c343',
+    '#8c87cd',
+    '#c4637f',
+    '#54a5e1',
+    '#f2f2f2',
+  },
+  brights = {
+    '#666666',
+    '#ff0000',
+    '#8dc744',
+    '#f8d248',
+    '#306ff6',
+    '#e5577b',
+    '#6ab6f7',
+    '#ffff00',
+  },
+  foreground = '#f2f2f2',
+  background = '#1f1f1f',
+  cursor_bg = '#c7c7c7',
+  cursor_fg = '#bbbbbb',
+  selection_bg = '#c7ddfc',
+  selection_fg = '#000000',
+}
