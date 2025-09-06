@@ -33,7 +33,6 @@ _get_target_dir() {
     echo "${shortcuts[$shortcut]:-$shortcut}"
 }
 alias rc='nv ~/.zshrc'
-alias src='source ~/.zshrc'
 alias svenv='source .venv/bin/activate'
 alias share='cd /mnt/window_share'
 alias ggit='cd $MyGit'
@@ -60,27 +59,26 @@ cdg() {
     cd $MyGit/$target_dir
 }
 
-
 gccp() {
 	gcc -o $* $*.c
 	./$*
 }
+
 gcom() {
   git add .
 	git commit -m "$*"
 	git push
 }
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-. "$HOME/.local/bin/env"
-
+#. "$HOME/.local/bin/env"
 export VCPKG_NUM_CPUS=$(nproc)
-
 eval "$(rbenv init - zsh)"
 
 plugins=(... rbenv ...)
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
