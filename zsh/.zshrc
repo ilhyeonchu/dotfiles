@@ -15,7 +15,8 @@ export PATH=/usr/local/cuda-12.5/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-12.5/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export MyGit=~/Documents/GitHub
 export PATH="$HOME/.rbenv/bin:$PATH"
-
+export DOTNET_ROOT="$HOME/.dotnet"
+export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools"
 # 단축어 모음
 typeset -A shortcuts
 shortcuts=(
@@ -35,7 +36,7 @@ _get_target_dir() {
 alias rc='nv ~/.zshrc'
 alias svenv='source .venv/bin/activate'
 alias share='cd /mnt/window_share'
-alias ggit='cd $MyGit'
+alias cdgit='cd $MyGit'
 alias nv='nvim'
 alias progc='cd "$MyGit/Practice-C"'
 alias ll='ls -alF'
