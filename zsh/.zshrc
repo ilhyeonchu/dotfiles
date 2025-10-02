@@ -47,6 +47,7 @@ alias tm='tmux'
 alias wez='wezterm'
 alias pcc='cd "$MyGit/PCC"'
 alias cdh='cd ~/'
+alias pdf='~/termpdf.py/termpdf.py'
 
 # go to dotfiles directory
 cdinit() {
@@ -83,3 +84,6 @@ plugins=(... rbenv ...)
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Created by `pipx` on 2025-09-18 13:12:56
+export PATH="$PATH:/home/ilhyeonchu/.local/bin"
