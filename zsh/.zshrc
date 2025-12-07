@@ -43,11 +43,14 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias woldesktop='wakeonlan 74:56:3c:62:0f:65'
+alias wolgpu='wakeonlan 10:ff:e0:bf:f7:33 & wakeonlan 6c:1f:f7:26:c7:2a'
 alias tm='tmux'
 alias wez='wezterm'
 alias pcc='cd "$MyGit/PCC"'
 alias cdh='cd ~/'
 alias pdf='~/termpdf.py/termpdf.py'
+alias leaktest='ASAN_OPTIONS=detect_leaks=1 ./test'
+alias makejson='bear -- make'
 
 # go to dotfiles directory
 cdinit() {
@@ -87,3 +90,4 @@ plugins=(... rbenv ...)
 
 # Created by `pipx` on 2025-09-18 13:12:56
 export PATH="$PATH:/home/ilhyeonchu/.local/bin"
+export PATH="$HOME/.local/share/gem/ruby/3.1.0/bin:$PATH"
