@@ -6,17 +6,21 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf history-substring-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting history-substring-search rbenv)
 
 source $ZSH/oh-my-zsh.sh
-export PATH=/usr/local/cuda-12.9/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-12.9/lib64:$LD_LIBRARY_PATH
-export PATH=/usr/local/cuda-12.5/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-12.5/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=$HOME/.local/bin:$PATH
+export PATH=/usr/local/cuda-12.8/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH
+# export PATH=/usr/local/cuda-12.5/bin${PATH:+:${PATH}}
+# export LD_LIBRARY_PATH=/usr/local/cuda-12.5/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export MyGit=~/Documents/GitHub
 export PATH="$HOME/.rbenv/bin:$PATH"
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # 단축어 모음
 typeset -A shortcuts
 shortcuts=(
@@ -45,7 +49,6 @@ alias l='ls -CF'
 alias woldesktop='wakeonlan 74:56:3c:62:0f:65'
 alias tm='tmux'
 alias wez='wezterm'
-alias pcc='cd "$MyGit/PCC"'
 alias cdh='cd ~/'
 
 # go to dotfiles directory
@@ -79,7 +82,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export VCPKG_NUM_CPUS=$(nproc)
 eval "$(rbenv init - zsh)"
 
-plugins=(... rbenv ...)
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
