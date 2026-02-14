@@ -20,6 +20,7 @@ export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export OBSIDIAN_VAULT="/home/ilhyeonchu/Documents/GitHub/obsidian"
 
 # 단축어 모음
 typeset -A shortcuts
